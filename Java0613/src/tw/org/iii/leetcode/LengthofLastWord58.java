@@ -26,6 +26,7 @@ public class LengthofLastWord58 {
 			
 			String[] s1 = s.split(" ");
 			return s1[s1.length - 1].length();
+			System.out.println("123");
 		}
 	}
 }
