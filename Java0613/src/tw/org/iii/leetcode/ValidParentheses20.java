@@ -16,7 +16,7 @@ public class ValidParentheses20 {
 		//Stack 建立向量資料結構(堆盤子)， .peek()方法:return最頂層的元素 .pop()方法:刪除最頂層的元素，.push()方法:新增元素至Stack的最頂層。	
 	}
 
-	class Solution {
+	private class Solution {
 		public boolean isValid(String s) {
 			boolean test = false;
 			if (s.length() % 2 != 0) {

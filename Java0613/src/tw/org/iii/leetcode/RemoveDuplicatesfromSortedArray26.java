@@ -20,7 +20,7 @@ public class RemoveDuplicatesfromSortedArray26 {
 		System.out.println(Arrays.toString(nums));
 	}
 
-	class Solution {
+	private class Solution {
 		public int removeDuplicates(int[] nums) {
 			int k = 0;
 			for (int i = 0; i < nums.length; i++) {

@@ -26,7 +26,7 @@ public class RemoveElement27 {
 		System.out.println(Arrays.toString(nums) + " " + k);
 	}
 
-	class Solution {
+	private class Solution {
 		public int removeElement(int[] nums, int val) {
 			int k = 0;
 			ArrayList<Integer> newnums = new ArrayList<>();

@@ -1,4 +1,4 @@
-package tw.org.iii.leetcode;
+ package tw.org.iii.leetcode;
 
 public class FindtheIndexoftheFirstOccurrenceinaString28 {
 	private Solution test = new Solution();
@@ -13,7 +13,7 @@ public class FindtheIndexoftheFirstOccurrenceinaString28 {
 
 	}
 
-	class Solution {
+	private class Solution {
 
 		public int strStr(String haystack, String needle) {
 			int index = -1;

@@ -20,7 +20,7 @@ public class LongestCommonPrefix14 {
 
 	}
 
-	class Solution {
+	private class Solution {
 		public String longestCommonPrefix(String[] strs) {
 //			String test = "";
 //			int len = strs[0].length();

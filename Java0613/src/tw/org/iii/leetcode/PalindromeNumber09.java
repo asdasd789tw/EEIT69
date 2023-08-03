@@ -14,7 +14,7 @@ public class PalindromeNumber09 {
 		String t = new String();
 	}
 
-	class Solution {
+	private class Solution {
 		public boolean isPalindrome(int x) {
 			char[] cr = Integer.toString(x).toCharArray();
 			boolean test = true;

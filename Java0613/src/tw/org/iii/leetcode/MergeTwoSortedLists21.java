@@ -33,7 +33,7 @@ public class MergeTwoSortedLists21 {
 	}
 
 	// Definition for singly-linked list.
-	class ListNode {
+	private class ListNode {
 		int val;
 		ListNode next;
 
@@ -50,7 +50,7 @@ public class MergeTwoSortedLists21 {
 		}
 	}
 
-	class Solution {
+	private class Solution {
 		public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 			if (list2 == null) {
 				return list1;

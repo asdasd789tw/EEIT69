@@ -11,7 +11,7 @@ public class LengthofLastWord58 {
 		System.out.println(t1.test.lengthOfLastWord("joyboy"));
 	}
 
-	class Solution {
+	private class Solution {
 		public int lengthOfLastWord(String s) {
 //			int len = 0;
 //			for (int i = s.length() - 1; i >= 0; i--) {

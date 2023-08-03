@@ -10,7 +10,7 @@ public class RomanToInteger13 {
 
 	}
 
-	class Solution {
+	private class Solution {
 		public int romanToInt(String s) {
 //	    	Symbol       Value
 //	    	I             1
