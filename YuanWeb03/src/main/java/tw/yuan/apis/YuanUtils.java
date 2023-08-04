@@ -42,34 +42,38 @@ public class YuanUtils {
 		return String.format("YA,%s", name);
 	}
 
-	public static String calc(String x, String y,String op) {
+	public static String calc(String x, String y, String op) {
 		try {
 			int intX = Integer.parseInt(x);
 			int intY = Integer.parseInt(y);
-			String result = "" ;
+			String result = "";
 			switch (op) {
 			case "1":
-				result = (intX + intY)+""; 
+				result = (intX + intY) + "";
 				break;
 			case "2":
-				result = (intX - intY)+"";
+				result = (intX - intY) + "";
 				break;
 			case "3":
-				result = (intX * intY)+"";
+				result = (intX * intY) + "";
 				break;
 			case "4":
-				result = (intX / intY)+"......"+(intX % intY);
-				break;				
+				result = (intX / intY) + "......" + (intX % intY);
+				break;
 			}
 			return result;
 		} catch (Exception e) {
 			return "";
 		}
 
-		
 	}
-	
+
 	public static Member createMember() {
-		return new Member(123,"iii","III","1999-09-09");
+		return new Member(123, "iii", "III", "1999-09-09");
+	}
+
+	public static int createScore() {
+
+		return (int) (Math.random() * 101);
 	}
 }
