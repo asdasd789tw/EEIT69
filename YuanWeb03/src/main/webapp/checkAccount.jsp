@@ -1,4 +1,5 @@
 
+<%@page import="tw.yuan.apis.Member"%>
 <%@page import="tw.yuan.apis.BCrypt"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
@@ -23,6 +24,8 @@
 	if(rs.next()){
 		String hashPasswd = rs.getString("password");
 		if(BCrypt.checkpw(passwd, hashPasswd)){
+			Member member = new Member(rs.getInt("id"),rs.getString("account"),rs.getString("cname"),null);
+			session.setAttribute("member", member);
 			response.sendRedirect("main.jsp");
 		}else{
 			session.invalidate();

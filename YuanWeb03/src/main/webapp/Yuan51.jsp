@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%
 	Object obj = session.getAttribute("lottery");
+
 	if(obj == null){
 		response.sendError(HttpServletResponse.SC_NOT_FOUND);
 		//response.sendRedirect("Yuan50.jsp");

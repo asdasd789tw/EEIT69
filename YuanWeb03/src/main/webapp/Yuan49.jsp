@@ -8,7 +8,8 @@
 <c:import var="data" url="https://data.moa.gov.tw/Service/OpenData/ODwsv/ODwsvAgriculturalProduce.aspx"></c:import>
 <%
 	String json = (String)pageContext.getAttribute("data");
-	
+
+
 	Class.forName("com.mysql.cj.jdbc.Driver");	
 	Properties prop = new Properties();
 	prop.put("user", "root");
@@ -31,5 +32,5 @@
 		//out.print(row.getString("Name") + "<br />");
 	}
 	out.print("Finish");
-	
+
 %>
