@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="tw.yuan.apis.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 <!DOCTYPE html>
@@ -13,11 +14,18 @@
 	SELECT * FROM foods
 </sql:query>
 
-<c:set var="rpp">10</c:set>
+<c:set var="rpp">7</c:set>
+<c:set var="pages">
+${rs.rowCount % rpp == 0 ? rs.rowCount / rpp : (Math.round((rs.rowCount - (rs.rowCount % rpp))/ rpp + 1))}
+</c:set>
+<c:set var="page">${param.page== null ? 1 : param.page }</c:set>
+<c:set var="prev">${YuanUtils.prevPage(page) }</c:set>
+<c:set var="next">${YuanUtils.nextPage(page,pages) }</c:set>
+<c:set var="start">${(page - 1 )*rpp }</c:set>
 
-<c:set var="test">${param.page}</c:set>
-<c:if test="${param.page==null || param.page<=0}"><c:set var="test">1</c:set></c:if>
-<c:if test="${Math.round(Math.ceil(rs.rowCount/rpp))<test}"><c:set var="test">${Math.round(Math.ceil(rs.rowCount/10))}</c:set></c:if>
+<sql:query var="rs2">
+SELECT * FROM foods LIMIT ${start },${rpp }
+</sql:query>
 
 <html>
 	<head>
@@ -25,8 +33,9 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-
-		<a href="?page=${test-1 }">上一頁</a> | <a href="?page=${test+1 }">下一頁</a>
+		總筆數: ${rs.rowCount }<br> 
+		目前頁數/總頁數: ${page } / ${pages }<br>
+		<a href="?page=${prev }">上一頁</a> | <a href="?page=${next }">下一頁</a>
 		<table border="1" width="100%">
 			<tr>
 				<th>#</th>
@@ -35,12 +44,10 @@
 				<th>tel</th>
 				<th>city</th>
 				<th>town</th>
-				<th>count</th>
 			</tr>
 			
 			
-			<c:forEach items="${rs.rows }" var="row" varStatus="status">	
-				<c:if test="${status.count <= rpp * test && status.count > rpp * (test-1)}">
+			<c:forEach items="${rs2.rows }" var="row" varStatus="status">	
 					<tr>
 						<td>${row.id }</td>
 						<td>${row.name }</td>
@@ -48,12 +55,11 @@
 						<td>${row.tel }</td>
 						<td>${row.city }</td>
 						<td>${row.town }</td>
-						<td>${status.count }</td>
 					</tr>
-				</c:if>
 			</c:forEach>
 		</table>
-		${test }
+		
+		<br>		
 		${param.page==null }
 		${Math.round(8/3)}
 		${Math.round(Math.floor(8/3))}

@@ -76,4 +76,21 @@ public class YuanUtils {
 
 		return (int) (Math.random() * 101);
 	}
+
+	public static int prevPage(String page) {
+		int p = Integer.parseInt(page);
+		if (p > 1) {
+			p--;
+		}
+		return p ;
+	}
+
+	public static int nextPage(String page, String pages) {
+		int p = Integer.parseInt(page);
+		int ps = (int)Double.parseDouble(pages);
+		if (p < ps) {
+			p++;
+		}
+		return p ;
+	}
 }
