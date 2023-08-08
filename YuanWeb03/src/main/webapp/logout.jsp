@@ -6,6 +6,6 @@
 	
 	
 	session.invalidate();
-	response.sendRedirect("Yuan50.jsp");
+	response.sendRedirect("login.html");
 	//全部資料清除
 %>
