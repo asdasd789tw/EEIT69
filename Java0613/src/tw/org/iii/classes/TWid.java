@@ -21,6 +21,7 @@ public class TWid {
 	public TWid(boolean isMale, int area) {
 		String c1 = letters1.substring(area, area + 1);
 		StringBuffer sb = new StringBuffer(c1);
+
 		sb.append(isMale ? "1" : "2");
 		for (int i = 0; i < 7; i++) {
 			sb.append((int) (Math.random() * 10));
@@ -39,6 +40,7 @@ public class TWid {
 
 	public String getID() {
 		return id;
+		
 	}
 
 	private TWid(String id) {
