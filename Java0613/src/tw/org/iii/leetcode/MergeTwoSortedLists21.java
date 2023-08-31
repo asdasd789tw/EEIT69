@@ -6,9 +6,9 @@ public class MergeTwoSortedLists21 {
 	private ListNode LN2 = new ListNode(3, LN1);
 	private ListNode LN3 = new ListNode(1, LN2);
 	private ListNode LNtt;
-	private ListNode LN11 = new ListNode(13);
+	private ListNode LN11 = new ListNode(22);
 	private ListNode LN12 = new ListNode(17, LN11);
-	private ListNode LN13 = new ListNode(22, LN12);
+	private ListNode LN13 = new ListNode(13, LN12);
 
 	private ListNode LN21 = new ListNode(2);
 	private ListNode LN31 = new ListNode(1);
@@ -17,18 +17,23 @@ public class MergeTwoSortedLists21 {
 		MergeTwoSortedLists21 t1 = new MergeTwoSortedLists21();
 		ListNode lnfor = t1.test.mergeTwoLists(t1.LN3, t1.LN13);
 		int temp = 0;
-		while (temp == 0) {
-			try {
-				for (int i = 0; i < 6; i++) {
-					System.out.println(lnfor.val);
-					lnfor = lnfor.next;
-				}
-			} catch (NullPointerException e) {
-				temp = 1;
-				System.out.println("END");
-			}
-
+//		System.out.println(t1.LN13.next);
+		while(lnfor!=null) {
+			System.out.println(lnfor.val);
+			lnfor = lnfor.next;
 		}
+//		while (temp == 0) {
+//			try {
+//				for (int i = 0; i < 6; i++) {
+//					System.out.println(lnfor.val);
+//					lnfor = lnfor.next;
+//				}
+//			} catch (NullPointerException e) {
+//				temp = 1;
+//				System.out.println("END");
+//			}
+//
+//		}
 
 	}
 
