@@ -167,14 +167,14 @@
 		</dependency>
 
 
-		<dependency>
-			<groupId>json</groupId>
-			<artifactId>json-20230618</artifactId>
-			<version>1.0</version>
-			<scope>system</scope>
+<!--		<dependency>-->
+<!--			<groupId>json</groupId>-->
+<!--			<artifactId>json-20230618</artifactId>-->
+<!--			<version>1.0</version>-->
+<!--			<scope>system</scope>-->
 <!--			<systemPath>C:\Users\User\git\EEIT69\YuanWeb03\src\main\webapp\WEB-INF\lib\json-20230618.jar</systemPath>-->
-			<systemPath>${basedir}/src/main/webapp/WEB-INF/lib/json-20230618.jar</systemPath>
-		</dependency>
+<!--			<systemPath>${basedir}/src/main/webapp/WEB-INF/lib/json-20230618.jar</systemPath>-->
+<!--		</dependency>-->
 <!--		暫時這樣導入-->
 
 	</dependencies>
